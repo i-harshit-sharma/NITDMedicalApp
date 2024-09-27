@@ -2,11 +2,10 @@ import React from 'react'
 import logo from '../../assets/logo.svg'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
-import { About } from '../About/About'
 
 export const Navbar = () => {
   return (
-    <Router>
+   
     <nav>
       <div className="logo-section">
       <div className="logo">
@@ -19,16 +18,16 @@ export const Navbar = () => {
       </div>
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link href="/services">Services</Link>
+          <Link to="/services">Services</Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
       <div className="auth">
@@ -36,10 +35,7 @@ export const Navbar = () => {
        
       </div>
     </nav>
-    <Routes>
-      <Route path="/about" element={<About/>}></Route>
-    </Routes>
-    </Router>
+    
    
   )
 }

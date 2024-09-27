@@ -13,10 +13,12 @@ import Login from './components/Auth/Login.jsx'
 // import Editor from "./components/Editor/Editor.jsx"
 // import {Footer} from './components/Footer/Footer.jsx'
 import { Appointment } from './components/Appointment/Appointment.jsx'
+import LandingPage from './components/LandingPage/LandingPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
+    {/* <LandingPage/> */}
     {/* <Doctor/> */}
     {/* <Login/> */}
     {/* <Footer/> */}
