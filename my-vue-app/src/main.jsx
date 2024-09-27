@@ -16,12 +16,12 @@ import { Appointment } from './components/Appointment/Appointment.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Doctor/> */}
     {/* <Login/> */}
     {/* <Footer/> */}
     {/* <Editor/> */}
-    <Appointment/>
+    {/* <Appointment/> */}
     {/* <Test/> */}
   </StrictMode>,
 )
