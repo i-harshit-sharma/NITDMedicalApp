@@ -1,13 +1,13 @@
 import React from 'react'
-import { Navbar } from '../Navbar/Navbar'
+// import { Navbar } from '../Navbar/Navbar'
 import './Login.css'
 // import { Doctor } from './Doctor'
-// import { Admin } from './Admin'
-import { Patient } from './Patient'
+import { Admin } from './Admin'
+// import { Patient } from './Patient'
  const Login = () => {
   return (
    <div className="">
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className="login">
         
         
@@ -18,7 +18,8 @@ import { Patient } from './Patient'
         <div className="patient-card box">Patient</div>
         <div className="guest-card box">Guest</div>
         </div>
-        <Patient/>
+        {/* <Patient /> */}
+        <Admin />
        
       </div>
     </div>
