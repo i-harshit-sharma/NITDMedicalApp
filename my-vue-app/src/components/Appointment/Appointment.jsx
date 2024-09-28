@@ -1,5 +1,5 @@
 import React, { useState,useRef } from "react";
-import { Navbar } from "../Navbar/Navbar";
+// import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
 import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
@@ -95,7 +95,7 @@ export const Appointment = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Toast ref={toast} />
       <div className="main">
         <div className="doctor-choice">

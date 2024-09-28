@@ -1,0 +1,36 @@
+.history-box{
+    /* height:25px; */
+    width: 100%;
+    background-color: #e2eafc;
+    box-shadow: 2px 2px 10px 1px hwb(203 1% 78% / 0.345);
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    /* border: 1px solid aqua; */
+
+}
+.history-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #003554;
+    color: #003554;
+}
+.history-header-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    /* background-color: #cc0f54; */
+}
+.history-content{
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-around;
+    gap: 10px;
+    
+}
+

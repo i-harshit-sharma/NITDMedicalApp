@@ -2,16 +2,17 @@ label{
     color: black;
     font-size: 18px;
 }
+
 .email {
     color: black;
     margin: 10px 10px 10px 0px;
 }
  input{
     /* margin-top:10px;
-    width: 100%;
-    height: 27px;
-    border: 2px solid gray;
-    border-radius: 4px; */
+    /* width: 100%; */
+    /* height: 27px; */
+    /* border: 2px solid gray; */
+    /* border-radius: 4px; */ 
 
 }
 .submit{
@@ -39,4 +40,6 @@ label{
 .forget a{
     text-decoration: none;
 }
-
+.max-h{
+    margin-top:30px;
+}

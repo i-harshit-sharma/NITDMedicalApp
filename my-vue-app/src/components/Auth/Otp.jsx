@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { InputOtp } from 'primereact/inputotp';
 import { Button } from 'primereact/button';

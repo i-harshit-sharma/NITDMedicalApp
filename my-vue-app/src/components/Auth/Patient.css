@@ -1,0 +1,101 @@
+label {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.email-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+#checkbox {
+    width: 15px;
+    height: 16px;
+}
+
+.remember {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.forget {
+    text-align: center;
+}
+
+.forget a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.patient-form-container {
+    max-width: 400px;
+    /* margin: 50px auto; */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.p-inputtext {
+    border: 2px solid #666;
+    font-size: 16px;
+    height: 40px;
+    border-radius: 4px;
+
+}
+input[type="email"]{
+    font-size: 16px;
+}
+.p-float-label label{
+    top:25%;
+}
+
+
+  .email-input:focus ~ .email-label,
+.email-label.active {
+    top: -19px;
+    left: 2px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #333;
+}
+  .password-input:focus ~ .password-label,
+.password-label.active {
+    top: -24px;
+    
+}
+.p-icon-field-right > .p-input-icon:last-of-type {
+    top: 30%;
+}
