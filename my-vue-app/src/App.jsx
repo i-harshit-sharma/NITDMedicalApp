@@ -5,7 +5,7 @@ import { About } from "./components/About/About";
 import { Home } from "./components/Home/Home";
 import { Services } from "./components/Services/Services";
 import { Contact } from "./components/Contact/Contact";
-import Doctor from "./components/DoctorPage/Doctor";
+// import Doctor from "./components/DoctorPage/Doctor";
 function App() {
   return (
     <Router>

@@ -1,41 +1,89 @@
 import React, { useState } from 'react';
-import './Doctor.css';
+import { InputText } from 'primereact/inputtext';
+import { Password } from "primereact/password";
+import { FloatLabel } from "primereact/floatlabel";
+import './Patient.css';
 import SampleDemo from './Otp';
 
 export const Admin = () => {
   const [otp, setOtp] = useState(true); // Use boolean for better readability
-
+  
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission
     setOtp(false); // Set otp to false to show the next UI
   };
-
+  
+  const [email, setEmail] = useState("");
+    const [value, setValue] = useState("");
+    const [click, setClick] = useState(false);
   return (
-    <div>
+    <>
       {otp ? ( 
-        <form onSubmit={handleSubmit}> {/* Use onSubmit for the form */}
-          <div className="email">
-            <label htmlFor="fmail">Enter the Email:</label>
-            <input type="email" id="fmail" required />
+        <div className="patient-form-container">
+        <form action="" method="get" className="form-layout"onSubmit={handleSubmit}>
+          <div className="card flex flex-column md:flex-row gap-3 input-wrapper">
+            <div className="p-inputgroup flex-1">
+              <span className="p-inputgroup-addon">
+                <i className="pi pi-user"></i>
+              </span>
+              <span className="p-float-label">
+                <InputText
+                  id="Email"
+                  type="email"
+                  className="email-input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <label
+                  htmlFor="Email"
+                  className={`email-label ${email ? "active" : ""}`}
+                >
+                  {email? "Enter your email" : "Email"}
+                </label>
+              </span>
+            </div>
           </div>
-          <div className="password">
-            <label htmlFor="fpass">Enter the Password:</label>
-            <input type="password" id="fpass" required />
+  
+          <div className="password-wrapper">
+            <div className="card flex justify-content-center">
+              <FloatLabel>
+                <Password
+                  inputId="password"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  toggleMask
+                  onFocus={() => setClick(true)}
+                  onBlur={value === "" ? () => setClick(false) : undefined}
+                />
+                <label htmlFor="password" id={click ? "move" : ""}>
+                  Password
+                </label>
+              </FloatLabel>
+            </div>
           </div>
+  
+          <div className="forgot-flex">
           <div className="remember">
-            <input type="checkbox" id='checkbox' />
+            <input type="checkbox" id="checkbox" />
             <label htmlFor="checkbox">Remember Me</label>
+          </div>
+  
+          <div className="forget">
+            <a href="#">Forgot Password?</a>
+          </div>
           </div>
           <div className="submit">
             <input type="submit" value="Submit" />
           </div>
-          <div className="forget">
-            <a href="">Forgot Password?</a>
-          </div>
         </form>
+      </div>
       ) : (
+        <div className="patient-form-continer">
+        <div className="bg-white">
         <SampleDemo/>
+        </div>
+        </div>
       )}
-    </div>
+    </>
   );
 };

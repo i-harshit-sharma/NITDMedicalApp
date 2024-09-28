@@ -7,8 +7,7 @@ import "./Patient.css";
 export const Patient = () => {
   const [email, setEmail] = useState("");
   const [value, setValue] = useState("");
-  const [content , setContent] = useState("Email")
-
+  const [click, setClick] = useState(false);
   return (
     <div className="patient-form-container">
       <form action="" method="get" className="form-layout">
@@ -23,15 +22,13 @@ export const Patient = () => {
                 type="email"
                 className="email-input"
                 value={email}
-                onChange={(e) => {setEmail(e.target.value)
-                setContent("Enter your email")}
-                }
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label
                 htmlFor="Email"
                 className={`email-label ${email ? "active" : ""}`}
               >
-                {content}
+                {email? "Enter your email" : "Email"}
               </label>
             </span>
           </div>
@@ -45,23 +42,28 @@ export const Patient = () => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 toggleMask
+                onFocus={() => setClick(true)}
+                onBlur={value === "" ? () => setClick(false) : undefined}
               />
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" id={click ? "move" : ""}>
+                Password
+              </label>
             </FloatLabel>
           </div>
         </div>
 
+        <div className="forgot-flex">
         <div className="remember">
           <input type="checkbox" id="checkbox" />
           <label htmlFor="checkbox">Remember Me</label>
         </div>
 
-        <div className="submit">
-          <input type="submit" value="Submit" />
-        </div>
-
         <div className="forget">
           <a href="#">Forgot Password?</a>
+        </div>
+        </div>
+        <div className="submit">
+          <input type="submit" value="Submit" />
         </div>
       </form>
     </div>

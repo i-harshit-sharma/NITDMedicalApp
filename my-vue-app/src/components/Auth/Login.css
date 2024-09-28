@@ -1,6 +1,81 @@
 html {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
+}
+
+.box {
+    align-items: center;
+    border: 2px solid black;
+    display: flex;
+    flex: 1;
+    font-size: 20px;
+    height: 45px;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(210, 236, 236, 0.55);
+}
+
+.card {
+    color: black;
+    display: flex;
+    margin-top: 20px;
+    /* width: 400px; */
+    flex-direction: column;
+}
+
+.contain {
+    display: flex;
+}
+
+.doctor-card,
+.patient-card {
+    border-right: none;
+}
+
+.forgot-flex {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.heading {
+    align-items: center;
+    background-color: rgba(210, 236, 236, 0.55);
+    border: 1px solid gray;
+    color: black;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    height: 45px;
+    justify-content: center;
+    width: 50%;
+    cursor: pointer;
+}
+
+.login {
+    align-items: center;
+    color: white;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.login-content {
+    background-color: rgb(210, 236, 236);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    padding: 20px;
+    width: 441px;
+}
+
+.login-head {
+    background-image: url('../../assets/image_contact.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .max-h {
@@ -8,106 +83,157 @@ html {
 }
 
 .page {
-    height: 100vh;
+    backdrop-filter: brightness(0.3);
+    backdrop-filter: blur(5px);
     color: white;
+    height: 100vh;
     overflow: hidden;
 
-    /* transform: filter(0.5); */
-    /* background: rgba(0,0,0,0); */
-    /* filter:brightness(0.5) */
-    backdrop-filter: blur(50px);
-    backdrop-filter: brightness(0.3);
-}
-
-.login-head {
-    background-image: url('../../assets/image_contact.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* background-color: #6e2525; */
-    /* width: 100vw; */
-    color: white;
-}
-
-.login-content {
-    width: 350px;
-    height: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgb(210, 236, 236);
-}
-
-.heading {
-    background-color: aqua;
-    height: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    font-size: 28px;
-    color: black;
-    font-weight: bold;
-}
-
-.card {
-    color: black;
-    margin-top: 20px;
-    display: flex;
-    /* justify-content: space-evenly; */
-}
-
-.box {
-    flex: 1;
-    border: 2px solid black;
-    text-align: center;
-    /* border-bottom: none; */
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-.doctor-card {
-    border-right: none;
-
-}
-
-.patient-card {
-    border-right: none;
-}
-
-.p-password {
-    width: 100%;
-}
-
-/* Inline #11 | http://localhost:5173/? */
-
-
-
-span.p-float-label:nth-child(1) {
-    flex-grow: 1;
-}
-
-
-.password-wrapper {
-    width: 270px;
 }
 
 .p-icon-field {
     flex-grow: 1;
 }
+
+.p-password,
 #password {
     width: 100%;
+}
+
+.password-wrapper {
+    /* width: 270px; */
+}
+
+.patient-form-container {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    max-width: 401px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.remember {
+    margin-top: 0;
+}
+
+span.p-float-label:nth-child(1) {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.submit > input:nth-child(1) {
+    border: 2px solid rgb(184, 188, 191);
+    width: 100%;
+}
+
+
+.login-top-bar{
+    /* background-color: #1a1a1a; */
+    /* color: white; */
+    display: flex;
+    width:400px;
+    /* justify-content: space-between; */
+    /* padding: 10px 0; */
+}
+.shape-better{
+    background-color: rgb(255, 255, 255);
+    border-bottom: none;
+}
+div.guest-card:nth-child(2) {
+    border-left: 0;
+    border-right:0;
+  }
+  
+/* Inline #5 | http://localhost:5173/? */
+
+.login-content {
+    /* background-color: rgb(210, 236, 236); */
+    background-color: rgba(210, 236, 236, 0.55);
+  }
+  
+  /* Inline #7 | http://localhost:5173/? */
+  
+  .patient-form-container {
+    /* background-color: #f9f9f9; */
+    background-color: #f9f9f9ad;
+  }
+
+/* Element | http://localhost:5173/? */
+
+.login-bottom-bar {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+/* Element | http://localhost:5173/? */
+
+.p-0 {
+    padding: 10px;
+  }
+  
+  /* Inline #1 | http://localhost:5173/? */
+  
+  .p-0 {
+    /* padding: 0rem !important; */
+  }
+  
+  /* Element | http://localhost:5173/? */
+  
+  div.flex:nth-child(4) > button:nth-child(2) {
+    margin: 10px;
+  }
+    
+
+/* Inline #6 | http://localhost:5173/? */
+
+.patient-form-container {
+    border: 2px solid black;
+    border-top: 0;
+  }
+  .bg-white{
+    background-color: white;
+  }
+  
+/* Inline #6 | http://localhost:5173/? */
+
+.patient-form-container {
+    /* background-color: #f9f9f9; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    background-color: #e5f0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
+  }
+  
+  /* Inline #5 | http://localhost:5173/? */
+  
+  .login-content {
+    /* background-color: rgba(210, 236, 236, 0.55); */
+  }
+  
+  .patient-form-container {
+    /* border: 2px solid black; */
+    border: 2px solid #00000014;
+  }
+  
+  .box {
+    /* border: 2px solid black; */
+    /* background-color: rgba(210, 236, 236, 0.55); */
+    border: 2px solid #c5c5c538;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .shape-better {
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(229, 240, 241);
+  }
+  
+  .login-content {
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  }
+  
+/* Inline #5 | http://localhost:5173/? */
+
+.login-content {
+    background-color: rgba(237, 235, 235, 0.84);
   }
   

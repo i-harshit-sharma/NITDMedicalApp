@@ -150,5 +150,10 @@ input:hover{
     z-index: 1000; /* Make sure it appears above other elements */
   }
   
-  
-  
+  .p-datepicker {
+    padding: 0.5rem;
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+  }
