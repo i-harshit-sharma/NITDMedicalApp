@@ -1,62 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/logo.svg";
 import "./Navbar.css";
 import { Button } from "primereact/button";
+import { useNavigate } from "react-router-dom";
+
 
 export const Navbar = () => {
-  const [selected, setSelected] = useState("Home");
+  const navigate = useNavigate();
 
-  const handleClick = (e) => {
-    setSelected(e.target.innerText);
+  const handleNavigation = (path) => {
+    navigate(path);
   };
 
   return (
-    <nav>
-      <div className="logo-section">
-        <div className="logo">
-          <img src={logo} alt="Health Center Logo" />
+    <>
+      <nav>
+        <div className="logo-section">
+          <div className="logo">
+            <img src={logo} alt="Health Center Logo" />
+          </div>
+
+          <div className="logo-text">
+            <p>Health Center</p>
+            <p>National Institute of Technology Delhi</p>
+          </div>
         </div>
 
-        <div className="logo-text">
-          <p>Health Center</p>
-          <p>National Institute of Technology Delhi</p>
+        <div className="right-div">
+          <div className="navbar-items-div">
+            <ul className="navbar-items">
+              <li className="navbar-item" onClick={() => handleNavigation("/")}>
+                Home
+              </li>
+              <li className="navbar-item" onClick={() => handleNavigation("/about")}>
+                About
+              </li>
+              <li className="navbar-item" onClick={() => handleNavigation("/services")}>
+                Services
+              </li>
+              <li className="navbar-item" onClick={() => handleNavigation("/contact")}>
+                Contact
+              </li>
+            </ul>
+          </div>
+          <div className="auth">
+            <Button label="Log In" className="login-btn" onClick={()=>handleNavigation("/login")} />
+            <Button label="Register" className="login-btn" severity="success" onClick={()=>handleNavigation("/register")} />
+          </div>
         </div>
-      </div>
-
-      <div className="right-div">
-        <div className="navbar-items-div">
-          <ul className="navbar-items">
-            <li
-              className={`navbar-item ${selected === "Home" ? "selected" : ""}`}
-              onClick={handleClick}
-            >
-              Home
-            </li>
-            <li
-              className={`navbar-item ${selected === "About" ? "selected" : ""}`}
-              onClick={handleClick}
-            >
-              About
-            </li>
-            <li
-              className={`navbar-item ${selected === "Services" ? "selected" : ""}`}
-              onClick={handleClick}
-            >
-              Services
-            </li>
-            <li
-              className={`navbar-item ${selected === "Contact" ? "selected" : ""}`}
-              onClick={handleClick}
-            >
-              Contact
-            </li>
-          </ul>
-        </div>
-        <div className="auth">
-          <Button label="Log In" className="login-btn" />
-          <Button label="Register" className="login-btn" severity="success" />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };

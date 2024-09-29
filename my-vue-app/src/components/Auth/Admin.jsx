@@ -2,25 +2,32 @@ import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Password } from "primereact/password";
 import { FloatLabel } from "primereact/floatlabel";
-import './Patient.css';
+import './Doctor.css';
 import SampleDemo from './Otp';
+import { useNavigate } from 'react-router-dom';
 
 export const Admin = () => {
-  const [otp, setOtp] = useState(true); // Use boolean for better readability
-  
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [value, setValue] = useState("");
+  const [click, setClick] = useState(false);
+  const [showOtp, setShowOtp] = useState(false);
+
+  // This function handles form submission
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission
-    setOtp(false); // Set otp to false to show the next UI
+    setShowOtp(true); // Show OTP page
   };
-  
-  const [email, setEmail] = useState("");
-    const [value, setValue] = useState("");
-    const [click, setClick] = useState(false);
+
   return (
-    <>
-      {otp ? ( 
-        <div className="patient-form-container">
-        <form action="" method="get" className="form-layout"onSubmit={handleSubmit}>
+    <div className="admin-form-container">
+      {showOtp ? (
+        <SampleDemo 
+          role="Admin" 
+          onOtpSubmit={() => navigate('/admin-dashboard')} // Navigate to Admin dashboard on OTP submit
+        />
+      ) : (
+        <form onSubmit={handleSubmit} className="form-layout">
           <div className="card flex flex-column md:flex-row gap-3 input-wrapper">
             <div className="p-inputgroup flex-1">
               <span className="p-inputgroup-addon">
@@ -34,16 +41,13 @@ export const Admin = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <label
-                  htmlFor="Email"
-                  className={`email-label ${email ? "active" : ""}`}
-                >
-                  {email? "Enter your email" : "Email"}
+                <label htmlFor="Email" className={`email-label ${email ? "active" : ""}`}>
+                  {email ? "Enter your email" : "Email"}
                 </label>
               </span>
             </div>
           </div>
-  
+
           <div className="password-wrapper">
             <div className="card flex justify-content-center">
               <FloatLabel>
@@ -61,29 +65,12 @@ export const Admin = () => {
               </FloatLabel>
             </div>
           </div>
-  
-          <div className="forgot-flex">
-          <div className="remember">
-            <input type="checkbox" id="checkbox" />
-            <label htmlFor="checkbox">Remember Me</label>
-          </div>
-  
-          <div className="forget">
-            <a href="#">Forgot Password?</a>
-          </div>
-          </div>
+
           <div className="submit">
             <input type="submit" value="Submit" />
           </div>
         </form>
-      </div>
-      ) : (
-        <div className="patient-form-continer">
-        <div className="bg-white">
-        <SampleDemo/>
-        </div>
-        </div>
       )}
-    </>
+    </div>
   );
 };

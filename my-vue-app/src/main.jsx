@@ -10,13 +10,16 @@ import Doctor from './components/DoctorPres/DoctorPres.jsx'
 import DoctorDashboard from './components/DocDash/DocDash';
 import Login from './components/Auth/Login.jsx'
 import { Appointment } from './components/Appointment/Appointment.jsx'
+import { Navbar } from './components/Navbar/Navbar.jsx';
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
+    <App />
     {/* <Doctor/> */}
     {/* <DoctorDashboard/> */}
     {/* <Login/> */}
     {/* <Appointment/> */}
+    {/* <Navbar/> */}
   </StrictMode>,
 )

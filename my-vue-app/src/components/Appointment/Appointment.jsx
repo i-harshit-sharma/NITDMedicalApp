@@ -1,6 +1,5 @@
 import React, { useState,useRef } from "react";
 import { Navbar } from "../Navbar/Navbar";
-import { Footer } from "../Footer/Footer";
 import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
 import { physioDoctors, gynacoDoctors, dermaDoctors, psychDoctors, endoDoctors } from "./doctorsInfo";
@@ -95,7 +94,6 @@ export const Appointment = () => {
 
   return (
     <div>
-      <Navbar />
       <Toast ref={toast} />
       <div className="main">
         <div className="doctor-choice">
@@ -168,7 +166,6 @@ export const Appointment = () => {
 
         <Button label="Submit" icon="pi pi-check" loading={loading} onClick={load} iconPos="right" outlined severity="success" />
       </div>
-      <Footer />
     </div>
   );
 };

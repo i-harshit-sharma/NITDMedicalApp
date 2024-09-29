@@ -12,7 +12,6 @@ const Login = () => {
   return (
     <div className="login-head">
       <div className="page">
-        <Navbar />
         <div className="login">
           <div className="login-content">
             <div className="contain">
