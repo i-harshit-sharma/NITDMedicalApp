@@ -1,13 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button } from 'primereact/button';
 import './History.css'
 function History(){
+    const [loading, setLoading] = useState(false);
+
+    const load = () => {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+        showToast();
+      }, 2000);
+    };
     return(
         <div className="history-box">
             <div className="history-header">
                 <div className="history-header-left">
-                    <div className="header-print">Print</div>
-                    <div className="header-view">View</div>
+                    <div className="header-print"><Button
+                    label="Print"
+                    iconPos="right"
+                  /></div>
+                    <div className="header-view"><Button
+                    label="View"
+                    severity="success"
+                  /></div>
                 </div>
                 <div className="history-header-right">28-09-2024</div>
             </div>

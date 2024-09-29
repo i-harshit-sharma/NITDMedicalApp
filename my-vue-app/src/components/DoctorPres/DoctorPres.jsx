@@ -7,6 +7,12 @@ import { useRef } from "react";
 import { Button } from "primereact/button";
 import History from "./History";
 import { InputNumber } from "primereact/inputnumber";
+import { Editor } from "primereact/editor";
+import '../Auth/Patient.css'
+import '../Auth/Doctor.css'
+import '../Auth/Login.css'
+import { FloatLabel } from "primereact/floatlabel";
+import { Password } from "primereact/password";
 
 function DoctorLogin() {
   const [visible, setVisible] = useState(false);
@@ -36,6 +42,8 @@ function DoctorLogin() {
   const [value2, setValue2] = useState(72);
   const [value0, setValue0] = useState(120);
   const [value1, setValue1] = useState(80);
+  const [value, setValue] = useState("");
+  const [click, setClick] = useState(false);
 
   const confirm = () => {
     if (!visible) {
@@ -43,7 +51,7 @@ function DoctorLogin() {
       toastBC.current.clear();
       toastBC.current.show({
         severity: "success",
-        summary: "Can you send me the report?",
+        summary: "Enter your password:",
         sticky: true,
         content: (props) => (
           <div
@@ -58,10 +66,27 @@ function DoctorLogin() {
             </div>
             <div className="font-medium text-lg my-3 text-900">
               {props.message.summary}
+              <div className="password-wrapper">
+          <div className="card flex justify-content-center">
+            <FloatLabel>
+              <Password
+                inputId="password"
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                toggleMask
+                onFocus={() => setClick(true)}
+                onBlur={value === "" ? () => setClick(false) : undefined}
+              />
+              <label htmlFor="password" id={click ? "move" : ""}>
+                Password
+              </label>
+            </FloatLabel>
+          </div>
+        </div>
             </div>
             <Button
               className="p-button-sm flex"
-              label="Reply"
+              label="Submit and Print"
               severity="success"
               onClick={clear}
             ></Button>
@@ -87,7 +112,7 @@ function DoctorLogin() {
           <div className="pres">
             <div className="pres-top">
               <div className="pres-top-left">
-                <div className="logo-section">
+                <div className="doc-logo-section">
                   <div className="logo">
                     <img src={logo} alt="Health Center Logo" />
                   </div>
@@ -99,25 +124,29 @@ function DoctorLogin() {
                 </div>
               </div>
               <div className="pres-top-right">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Caduceus.svg" alt="" />
+                <div className="doc-info">
                 <span className="bold">Dr. Aryan Mishra</span>
-                <span className="bold">Md. Medicine</span>
-                <span className="bold">Room No. 112</span>
-                <span className="bold">Mini Campus</span>
-                <span className="bold">NIT, Delhi</span>
-                <span className="bold">+91 9509649232</span>
+                <span className="italic">Md. Medicine</span>
+                <span className="">Room No. 112</span>
+                <span className="">Mini Campus</span>
+                <span className="">NIT, Delhi</span>
+                <span className="">+91 9509649232</span>
+                </div>
               </div>
             </div>
             <div className="pres-content">
               <div className="pres-content-left">
                 <span className="same-line">
                   <span className="bold">Name:</span>{" "}
-                  {patientAppoinment[0].name}
+                  <span className="bbt">{patientAppoinment[0].name}</span>
                 </span>
                 <span className="same-line">
-                  <span className="bold">Age:</span> {patientAppoinment[0].age}
+                  <span className="bold">Age: </span>  <span className="bbt">{patientAppoinment[0].age}</span>
                 </span>
                 <span className="same-line">
-                  <span className="bold">Sex:</span> {patientAppoinment[0].Sex}
+                  <span className="bold">Sex: </span> 
+                  <span className="bbt">{patientAppoinment[0].Sex}</span>
                 </span>
                 <span className="same-line">
                   {" "}
@@ -230,17 +259,27 @@ function DoctorLogin() {
               <div className="pres-content-right">
                 <div className="pres-content-header">
                   <div className="pres-content-header-left">
-                    ID: {patientAppoinment[0].ID}
+                    <span className="bold">ID: </span><span className="btb">{patientAppoinment[0].ID}</span>
                   </div>
                   <div className="pres-content-header-right">
-                    Date: {patientAppoinment[0].date}
+                  <span className="bold">Date: </span><span className="btb">{patientAppoinment[0].date}</span>
                   </div>
                 </div>
                 <div className="pres-content-content">
-                  <div className="pres-content-symptom">Symptom</div>
-                  <div className="pres-content-diagnosis">Diagnosis</div>
-                  <div className="pres-content-medication">Medication</div>
-                  <div className="pres-content-test">Tests</div>
+                  <div className="pres-content-symptom"><span className="bold">Symptom: </span>
+                    <Editor style={{ height: "171px" }} />
+                  </div>
+                  <div className="pres-content-diagnosis"><span className="bold">Diagnosis: </span>
+                  <Editor style={{ height: "123px" }} />
+                  </div>
+                  <div className="pres-content-medication"><span className="bold">Medication: </span>
+                  <Editor style={{ height: "373px" }} />
+
+                  </div>
+                  <div className="pres-content-test"><span className="bold">Tests: </span>
+                  <Editor style={{ height: "232px" }} />
+
+                  </div>
                 </div>
                 <div className="pres-content-footer">
                   <Toast
@@ -250,11 +289,8 @@ function DoctorLogin() {
                   />
                   <Button
                     label="Print"
-                    icon="pi pi-check"
-                    loading={loading}
                     onClick={confirm}
                     iconPos="right"
-                    outlined
                   />
                   <Button
                     label="Submit"
@@ -262,7 +298,6 @@ function DoctorLogin() {
                     loading={loading}
                     onClick={load}
                     iconPos="right"
-                    outlined
                     severity="success"
                   />
                 </div>

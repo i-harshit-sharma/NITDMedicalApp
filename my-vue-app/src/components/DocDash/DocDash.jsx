@@ -3,10 +3,10 @@ import './DocDash.css';
 
 const DoctorDashboard = () => {
   const [appointments, setAppointments] = useState([
-    { id: 1, patientName: "John Doe", time: "09:00 AM" },
-    { id: 2, patientName: "Jane Smith", time: "11:00 AM" },
-    { id: 3, patientName: "Alice Johnson", time: "01:00 PM" },
-    { id: 4, patientName: "Bob Brown", time: "03:00 PM" },
+    { id: 1, patientName: "Harshit Sharma", time: "09:00 AM" },
+    { id: 2, patientName: "Bhavay Vashisth", time: "11:00 AM" },
+    { id: 3, patientName: "Dheeraj Kumar", time: "01:00 PM" },
+    { id: 4, patientName: "Mohit", time: "03:00 PM" },
   ]);
   const [searchTerm, setSearchTerm] = useState("");
   const [viewPastHistory, setViewPastHistory] = useState(false);
@@ -75,9 +75,9 @@ const DoctorDashboard = () => {
             <div className="past-history">
               <h2>Past Appointments</h2>
               <ul>
-                <li>John Doe - 09/20/2024</li>
-                <li>Jane Smith - 09/18/2024</li>
-                <li>Alice Johnson - 09/15/2024</li>
+                <li>Daksh - 09/20/2024</li>
+                <li>Harshit - 09/18/2024</li>
+                <li>Kamlesh - 09/15/2024</li>
               </ul>
             </div>
           )}

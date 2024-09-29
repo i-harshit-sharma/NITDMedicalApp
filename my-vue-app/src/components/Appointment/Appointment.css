@@ -157,3 +157,37 @@ input:hover{
     border: 1px solid #d1d5db;
     border-radius: 6px;
   }
+
+
+  .card > div:nth-child(1) > span:nth-child(3) {
+    height: 100%;
+  }
+  .card > div:nth-child(2) > span:nth-child(3) {
+    height: 100%;
+  }
+  
+  /* Inline #9 | http://localhost:5173/ */
+  
+  .p-inputtext {
+    border: 0;
+  }
+
+
+.p-placeholder {
+    height: 100%;
+  }
+  
+  .hack{
+    margin: 0;
+  }
+
+
+.doctor-name > div:nth-child(1) > span:nth-child(3) {
+    display: flex;
+    align-items: center;
+  }
+  
+.date >span>  input.p-inputtext {
+    height: 60px;
+  }
+  
