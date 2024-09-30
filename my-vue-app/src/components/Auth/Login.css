@@ -19,7 +19,7 @@ html {
 .card {
     color: black;
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* width: 400px; */
     flex-direction: column;
 }
@@ -37,7 +37,7 @@ html {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .heading {
@@ -70,6 +70,7 @@ html {
     height: 500px;
     padding: 20px;
     width: 441px;
+    color: #000;
 }
 
 .login-head {
@@ -130,7 +131,7 @@ span.p-float-label:nth-child(1) {
     /* background-color: #1a1a1a; */
     /* color: white; */
     display: flex;
-    width:400px;
+    width:361px;
     /* justify-content: space-between; */
     /* padding: 10px 0; */
 }
@@ -149,15 +150,6 @@ div.guest-card:nth-child(2) {
     /* background-color: rgb(210, 236, 236); */
     background-color: rgba(210, 236, 236, 0.55);
   }
-  
-  /* Inline #7 | http://localhost:5173/? */
-  
-  .patient-form-container {
-    /* background-color: #f9f9f9; */
-    background-color: #f9f9f9ad;
-  }
-
-/* Element | http://localhost:5173/? */
 
 .login-bottom-bar {
     background-color: rgba(255, 255, 255, 0);
@@ -185,7 +177,6 @@ div.guest-card:nth-child(2) {
 /* Inline #6 | http://localhost:5173/? */
 
 .patient-form-container {
-    border: 2px solid black;
     border-top: 0;
   }
   .bg-white{
@@ -197,12 +188,6 @@ div.guest-card:nth-child(2) {
 .patient-form-container {
     /* background-color: #f9f9f9; */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    background-color: #e5f0f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
-  }
-  
-  .patient-form-container {
-    border: 2px solid #00000014;
   }
   
   .box {
@@ -230,4 +215,7 @@ div.guest-card:nth-child(2) {
     border: 2px solid gray;
     border-radius: 4px;
   }
-  
+  .custom-otp-input-sample{
+    width: 40px !important;
+    height: 48px !important;
+  }

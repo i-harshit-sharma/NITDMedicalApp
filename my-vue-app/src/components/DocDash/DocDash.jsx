@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './DocDash.css';
+import { useNavigate } from "react-router-dom";
 
 const DoctorDashboard = () => {
   const [appointments, setAppointments] = useState([
@@ -7,6 +8,10 @@ const DoctorDashboard = () => {
     { id: 2, patientName: "Bhavay Vashisth", time: "11:00 AM" },
     { id: 3, patientName: "Dheeraj Kumar", time: "01:00 PM" },
     { id: 4, patientName: "Mohit", time: "03:00 PM" },
+    { id: 5, patientName: "Rahul", time: "05:00 PM" },
+    { id: 6, patientName: "Rohit", time: "05:00 PM" },
+    { id: 7, patientName: "Rajat", time: "05:00 PM" },
+
   ]);
   const [searchTerm, setSearchTerm] = useState("");
   const [viewPastHistory, setViewPastHistory] = useState(false);
@@ -21,11 +26,10 @@ const DoctorDashboard = () => {
     appointment.patientName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const navigate = useNavigate();
+
   return (
     <div className="doctor-dashboard">
-      <header className="dashboard-header">
-        <h1>Doctor's Dashboard</h1>
-      </header>
       
       <div className="tab-bar">
         <button
@@ -56,7 +60,7 @@ const DoctorDashboard = () => {
           <ul className="appointment-list">
             {filteredAppointments.length ? (
               filteredAppointments.map((appointment) => (
-                <li key={appointment.id} className="appointment-item">
+                <li key={appointment.id} className="appointment-item " onClick={()=>navigate('/doctoreditor')}>
                   <span>{appointment.time} - {appointment.patientName}</span>
                 </li>
               ))

@@ -54,11 +54,11 @@
     line-height: 1.5; 
   }
   
-  ul {
+  .services-contact ul {
     padding-left: 20px; 
   }
   
-  ul li {
+  .services-contact ul li {
     margin-bottom: 15px; 
   }
   
@@ -110,4 +110,6 @@
   .services-contact h2 {
     margin-bottom: 15px;
   }
-  
+  .services-container{
+    padding: 36px;
+  }

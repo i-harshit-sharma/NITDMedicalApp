@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { InputOtp } from 'primereact/inputotp';
 import { Button } from 'primereact/button';
 import { useNavigate, Link } from 'react-router-dom';
-import { Appointment } from '../Appointment/Appointment';
+// import { Appointment } from '../Appointment/Appointment';
 export default function SampleDemo({ role }) {
     const [token, setTokens] = useState('');
     const navigate = useNavigate(); // Initialize navigate
@@ -12,7 +12,7 @@ export default function SampleDemo({ role }) {
             <>
                 <input {...events} {...props} type="text" className="custom-otp-input-sample" />
                 {props.id === 2 && (
-                    <div className="px-3">
+                    <div className="px-2">
                         <i className="pi pi-minus" />
                     </div>
                 )}
@@ -72,21 +72,21 @@ export default function SampleDemo({ role }) {
                     }
                 `}
             </style>
-            <div className="bg-white flex flex-column align-items-center">
+            <div className="bg-white flex flex-column align-items-center hack3">
                 <p className="font-bold text-xl mb-2">Authenticate Your Account</p>
-                <p className="text-color-secondary block mb-5">Please enter the code sent to your email.</p>
+                <p className="text-color-secondary block mb-2">Please enter the code sent to your email.</p>
                 <InputOtp value={token} onChange={(e) => setTokens(e.value)} length={6} inputTemplate={customInput} style={{gap: 0}} />
-                <div className="flex justify-content-between mt-5 align-self-stretch">
+                <div className="flex justify-content-between mt-3 align-self-stretch">
                     <Button label="Resend Code" link />
                     <Button label="Submit Code" onClick={handleSubmit} /> {/* Add onClick handler */}
                 </div>
                 
                 {/* Add links for Appointment and Doctor Dashboard */}
-                <div className="flex justify-content-between mt-5">
+                {/* <div className="flex justify-content-between mt-3">
                     <Link to="/appointment" className="p-button p-component p-button-text">Appointment</Link>
                     <Link to="/doctor" className="p-button p-component p-button-text">Doctor Dash</Link>
                     <Link to="/admin" className="p-button p-component p-button-text">Admin Dash</Link>
-                </div>
+                </div> */}
             </div>
         </div>
     );

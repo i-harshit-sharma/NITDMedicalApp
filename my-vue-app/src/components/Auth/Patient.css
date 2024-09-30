@@ -2,7 +2,9 @@
     height: 16px;
     width: 15px;
 }
-
+.hack2{
+    margin: 0;
+}
 #move {
     color: #333;
     font-size: 15px;
@@ -40,7 +42,7 @@
 .form-layout {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    /* gap: 15px; */
 }
 
 input[type="email"] {
@@ -82,11 +84,11 @@ label {
     font-size: 18px;
     font-weight: 500;
 }
-
+.hack3{
+    height: 242px;
+}
 .patient-form-container {
-    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     padding: 20px;
     border-top-left-radius: 0;
@@ -94,7 +96,7 @@ label {
 }
 
 .p-float-label label {
-    top: 25%;
+    top: 30%;
 }
 
 .p-icon-field-right > .p-input-icon:last-of-type {
@@ -118,4 +120,8 @@ label {
     display: flex;
     gap: 10px;
     /* margin-top: 15px; */
+}
+
+.password-wrapper{
+    margin-top: 12px;
 }

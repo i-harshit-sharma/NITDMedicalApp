@@ -1,0 +1,103 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px 16px 46px;
+    background-color: #f8f9fa;
+    box-shadow: 0px -10px 19px 4px gray;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo_section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .logo_text {
+    margin-left: 30px;
+  }
+  
+  .logo_text p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .logo_text p:last-child {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .right_div {
+    display: flex;
+    align-items: space-between;
+  }
+  
+  .navbar_items_div {
+    margin-right: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar_items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  ul
+  .navbar_item {
+    cursor: pointer;
+    /* color: #007bff; */
+    /* text-transform: uppercase; */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin: 0;
+  }
+  .navbar-items-div> ul{
+        padding-right: 24px;
+  }
+  .navbar_item:hover {
+    color: #0056b3;
+  }
+  
+  .auth {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .login_btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .register_btn {
+    background-color: #28a745;
+    color: white;
+
+    border: none;}
+    .logo > img:nth-child(1) {
+        height: 50px;
+        scale: 1.4;
+      }
+      .selected{
+        color: #0056b3;
+      }
+  .logo_text p{
+    margin: 0;
+  }
+
+  .p-button{
+    padding: 0;
+gap: 13px;
+width: 100px;
+height: 42px;
+  }

@@ -6,11 +6,11 @@ import 'primeflex/primeflex.css';
 import 'primereact/resources/primereact.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import App from './App.jsx'
-import Doctor from './components/DoctorPres/DoctorPres.jsx'
-import DoctorDashboard from './components/DocDash/DocDash';
-import Login from './components/Auth/Login.jsx'
-import { Appointment } from './components/Appointment/Appointment.jsx'
-import { Navbar } from './components/Navbar/Navbar.jsx';
+// import Doctor from './components/DoctorPres/DoctorPres.jsx'
+// import DoctorDashboard from './components/DocDash/DocDash';
+// import Login from './components/Auth/Login.jsx'
+// import { Appointment } from './components/Appointment/Appointment.jsx'
+// import { Navbar } from './components/Navbar/Navbar.jsx';
 
 
 createRoot(document.getElementById('root')).render(

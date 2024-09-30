@@ -10,6 +10,7 @@ import Register from "./components/Register/Register";
 import AdminDash from "./components/AdminDash/AdminDash";
 import { Appointment } from "./components/Appointment/Appointment";
 import DocDash from "./components/DocDash/DocDash"; 
+import DocLogin from "./components/DoctorPres/DoctorPres";
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
           <Route path="/admin" element={<AdminDash />}></Route>
           <Route path="/doctor" element={<DocDash />}></Route>
           <Route path="/appointment" element={<Appointment/>}></Route>
+          <Route path="/doctoreditor" element={<DocLogin/>}></Route>
           
         </Routes>
         

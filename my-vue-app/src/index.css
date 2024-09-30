@@ -11,3 +11,12 @@
     background-color: #f9f9f9;
   }
 }
+body {
+  width: 99vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+input{
+  color: black !important;
+}

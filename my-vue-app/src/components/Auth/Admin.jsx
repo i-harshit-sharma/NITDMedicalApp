@@ -3,6 +3,7 @@ import { InputText } from 'primereact/inputtext';
 import { Password } from "primereact/password";
 import { FloatLabel } from "primereact/floatlabel";
 import './Doctor.css';
+import './Patient.css'
 import SampleDemo from './Otp';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,15 +21,15 @@ export const Admin = () => {
   };
 
   return (
-    <div className="admin-form-container">
+    <div className="patient-form-container">
       {showOtp ? (
         <SampleDemo 
           role="Admin" 
-          onOtpSubmit={() => navigate('/admin-dashboard')} // Navigate to Admin dashboard on OTP submit
+          onOtpSubmit={() => navigate('/admin-dashboard')} 
         />
       ) : (
         <form onSubmit={handleSubmit} className="form-layout">
-          <div className="card flex flex-column md:flex-row gap-3 input-wrapper">
+          <div className="card flex flex-column md:flex-row gap-3 input-wrapper ">
             <div className="p-inputgroup flex-1">
               <span className="p-inputgroup-addon">
                 <i className="pi pi-user"></i>
@@ -55,7 +56,6 @@ export const Admin = () => {
                   inputId="password"
                   value={value}
                   onChange={(e) => setValue(e.target.value)}
-                  toggleMask
                   onFocus={() => setClick(true)}
                   onBlur={value === "" ? () => setClick(false) : undefined}
                 />
@@ -65,7 +65,15 @@ export const Admin = () => {
               </FloatLabel>
             </div>
           </div>
-
+          <div className="forgot-flex">
+          <div className="remember">
+            <input type="checkbox" id="checkbox" />
+            <label htmlFor="checkbox">Remember Me</label>
+          </div>
+          <div className="forget">
+            <a href="#">Forgot Password?</a>
+          </div>
+        </div>
           <div className="submit">
             <input type="submit" value="Submit" />
           </div>
